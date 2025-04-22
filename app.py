@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # --- Basic Login ---
-st.title("🔒 Jail Informer – Red Flag Viewer")
+st.title(" Jail Informer – Red Flag Viewer")
 password = st.text_input("Enter Access Password", type="password")
 
 if password != "runsecure":
@@ -19,7 +19,7 @@ if uploaded_file:
     df = df.dropna(subset=["Call ID", "Summary"])
     df = df.loc[:, ~df.columns.str.contains(r'^\.\d+$')]
 
-    st.subheader("🚨 Filtered Alerts Table")
+    st.subheader(" Filtered Alerts Table")
 
     # Sidebar filters
     st.sidebar.header("Filter Options")
